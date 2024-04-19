@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body>
+    <div class="options-wrapper">
+      <label class="material-symbols-outlined" for="modal-1"> settings </label>
+    </div>
+    <div class="content-wrapper">
+      <div class="title">Etch-a-Sketch</div>
+
+      <div class="container-wrapper">
+        <div id="container"></div>
+      </div>
+
+      <div class="palette">
+        <button aria-label="white_color" class="colors" id="white"></button>
+        <button aria-label="black_color" class="colors" id="black"></button>
+        <button aria-label="purple_color" class="colors" id="purple"></button>
+        <button aria-label="pink_color" class="colors" id="pink"></button>
+        <button aria-label="yellow_color" class="colors" id="yellow"></button>
+        <button aria-label="blue_color" class="colors" id="blue"></button>
+        <button aria-label="green_color" class="colors" id="green"></button>
+      </div>
+
+      <div class="menu">
+        <button id="reset">Reset Board</button>
+      </div>
+    </div>
+
+    <input class="modal-state" id="modal-1" type="checkbox" />
+    <div class="modal">
+      <label class="modal__bg" for="modal-1"></label>
+      <div class="modal__inner">
+        <div class="modal_header">
+          <div class="modal_title">Board Size</div>
+          <label class="close" for="modal-1">&times;</label>
+        </div>
+
+        <div class="radio-button-form">
+          <div class="radio-button-label">
+            <input type="radio" id="board_size" name="size" value="32" />
+            <label for="board_size">32 x 32</label>
+          </div>
+          <div class="radio-button-label">
+            <input
+              type="radio"
+              id="board_size"
+              name="size"
+              value="64"
+              checked="True"
+            />
+            <label for="board_size">64 x 64</label>
+          </div>
+
+          <div class="radio-button-label">
+            <input type="radio" id="board_size" name="size" value="80" />
+            <label for="board_size">80 x 80</label>
+          </div>
+          <div class="radio-button-label">
+            <input type="radio" id="board_size" name="size" value="96" />
+            <label for="board_size">96 x 96</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
